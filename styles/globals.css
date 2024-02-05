@@ -1,0 +1,409 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  max-width: none !important;
+}
+
+.computer {
+  opacity: 0;
+  transition: 0.4s all;
+  cursor: pointer;
+}
+
+.computer:hover {
+  opacity: 1;
+  /* transform: scale(1.01); */
+}
+.n_computer {
+  transition: 0.4s all;
+  cursor: pointer;
+}
+
+.n_computer_de {
+  opacity: 0;
+  transition: 0.4s all;
+  cursor: pointer;
+}
+.n_computer:hover .n_computer_de {
+  opacity: 1;
+  /* transform: scale(1.01); */
+}
+
+.tablet {
+  opacity: 0;
+  transition: 0.4s ease-in-out all;
+  cursor: pointer;
+}
+
+.tablet:hover {
+  opacity: 1;
+}
+.n_tablet {
+  transition: 0.4s ease-in-out all;
+  cursor: pointer;
+}
+.n_tablet_de {
+  opacity: 0;
+  transition: 0.4s ease-in-out all;
+  cursor: pointer;
+}
+.n_tablet:hover .n_tablet_de {
+  opacity: 1;
+}
+
+.background_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.computer {
+  width: 34%;
+  left: 14.6%;
+  top: 24%;
+}
+.tablet {
+  width: 8.1%;
+  right: 20.85%;
+  bottom: 18.5%;
+}
+.space_vid {
+  width: 24.5%;
+  right: 13%;
+  height: 59%;
+  bottom: 23%;
+}
+
+.n_light {
+  width: 40%;
+  left: 23%;
+  opacity: 1;
+  top: 30%;
+}
+.n_computer {
+  width: 36%;
+  left: 14%;
+  top: 24.3%;
+}
+.n_computer_de {
+  width: 36%;
+  left: 14%;
+  top: 24.3%;
+}
+.n_tablet {
+  width: 7.2%;
+  right: 21%;
+  bottom: 20.2%;
+}
+.n_tablet_de {
+  width: 7.2%;
+  right: 21%;
+  bottom: 20.2%;
+}
+.n_tablet_light {
+  width: 21.8%;
+  right: 15%;
+  bottom: 18.6%;
+  transform: rotate(-3.5deg);
+}
+.computer_top {
+   
+  left: 35%;
+  top: 50%;
+}
+.tab_top {
+   
+  right: 24%;
+  bottom: 23%;
+}
+
+
+
+/* @media screen and (min-width: 1024px) {
+  .background_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .computer {
+    width: 34%;
+    left: 14.6%;
+    top: 24%;
+  }
+  .tablet {
+    width: 8.1%;
+    right: 20.85%;
+    bottom: 18.5%;
+  }
+  .space_vid {
+    width: 24.5%;
+    right: 13%;
+    height: 59%;
+    bottom: 23%;
+  }
+  .n_computer {
+    width: 36%;
+    left: 14%;
+    top: 24.3%;
+  }
+  .n_computer_de {
+    width: 36%;
+    left: 14%;
+    top: 24.3%;
+  }
+  .n_tablet {
+    width: 7.2%;
+    right: 21%;
+    bottom: 20.2%;
+  }
+  .n_tablet_de {
+    width: 7.2%;
+    right: 21%;
+    bottom: 20.2%;
+  }
+  .n_tablet_light {
+    width: 21.8%;
+    right: 15%;
+    bottom: 18.6%;
+    transform: rotate(-3.5deg);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .background_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .computer {
+    width: 34%;
+    left: 14.6%;
+    top: 24%;
+  }
+  .tablet {
+    width: 8.1%;
+    right: 20.85%;
+    bottom: 18.5%;
+  }
+  .space_vid {
+    width: 24.5%;
+    right: 13%;
+    height: 59%;
+    bottom: 23%;
+  }
+  .n_computer {
+    width: 36%;
+    left: 14%;
+    top: 24.3%;
+  }
+  .n_computer_de {
+    width: 36%;
+    left: 14%;
+    top: 24.3%;
+  }
+  .n_tablet {
+    width: 7.2%;
+    right: 21%;
+    bottom: 20.2%;
+  }
+  .n_tablet_de {
+    width: 7.2%;
+    right: 21%;
+    bottom: 20.2%;
+  }
+  .n_tablet_light {
+    width: 21.8%;
+    right: 15%;
+    bottom: 18.6%;
+    transform: rotate(-3.5deg);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .background_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .computer {
+    width: 34%;
+    left: 14.6%;
+    top: 24%;
+  }
+
+  .tablet {
+    width: 8.1%;
+    right: 20.85%;
+    bottom: 18.5%;
+  }
+  .space_vid {
+    width: 24.5%;
+    right: 13%;
+    height: 59%;
+    bottom: 23%;
+  }
+  .n_computer {
+    width: 36%;
+    left: 14%;
+    top: 24.3%;
+  }
+  .n_computer_de {
+    width: 36%;
+    left: 14%;
+    top: 24.3%;
+  }
+  .n_tablet {
+    width: 7.2%;
+    right: 21%;
+    bottom: 20.2%;
+  }
+  .n_tablet_de {
+    width: 7.2%;
+    right: 21%;
+    bottom: 20.2%;
+  }
+  .n_tablet_light {
+    width: 21.8%;
+    right: 15%;
+    bottom: 18.6%;
+    transform: rotate(-3.5deg);
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .background_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .computer {
+    width: 34%;
+    left: 14.6%;
+    top: 24%;
+  }
+  .tablet {
+    width: 8.1%;
+    right: 20.85%;
+    bottom: 18.5%;
+  }
+  .space_vid {
+    width: 24.5%;
+    right: 13%;
+    height: 59%;
+    bottom: 23%;
+  }
+  .n_computer {
+    width: 36%;
+    left: 14%;
+    top: 24.3%;
+  }
+  .n_computer_de {
+    width: 36%;
+    left: 14%;
+    top: 24.3%;
+  }
+  .n_tablet {
+    width: 7.2%;
+    right: 21%;
+    bottom: 20.2%;
+  }
+  .n_tablet_de {
+    width: 7.2%;
+    right: 21%;
+    bottom: 20.2%;
+  }
+  .n_tablet_light {
+    width: 21.8%;
+    right: 15%;
+    bottom: 18.6%;
+    transform: rotate(-3.5deg);
+  }
+} */
+
+video::-webkit-media-controls {
+  display: none;
+}
+.item {
+  transition: 0.5s ease all;
+  min-width: 1366px;
+  min-height: 768px;
+}
+@media screen and (min-height: 768px) {
+  .item {
+    min-width: 1620px;
+    min-height: 900px;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  .item {
+    min-width: 1920px;
+    min-height: 1080px;
+  }
+}
+
+@media screen and (min-height: 1080px) {
+  .item {
+    min-width: 2560px;
+    min-height: 1440px;
+  }
+}
+
+/* @media screen and (min-width: 1920px) {
+  .item {
+      min-width:2560px;
+      min-height: 1440px
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .item {
+      min-width:3440px;
+      min-height: 1440px
+  }
+} */
+
+.animate_right {
+  animation-name: arrowRight;
+  animation-duration: 1.5s;
+  transition: 1s linear all;
+  animation-iteration-count: infinite;
+}
+
+.animate_scale{
+  animation-name: modalAnimation;
+  animation-duration: 1.5s;
+  transition: 1s linear all;
+ 
+}
+@keyframes arrowRight {
+  0% {
+    right: 20px;
+  }
+  50% {
+    right: 5px;
+  }
+  100% {
+    right: 20px;
+  }
+}
+@keyframes modalAnimation {
+  0% {
+    opacity: .0;
+    transform: scale(.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
