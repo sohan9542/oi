@@ -2,14 +2,15 @@ import Image from "next/image";
 import React from "react";
 
 interface ComputerModalProps {
+  open:any,
   setOpen: (value: boolean) => void;
 }
 
-const ComputerModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
+const ComputerModal: React.FC<ComputerModalProps> = ({ setOpen,open }) => {
   return (
     <div
   
-      
+    style={open?{width:'100%'}:{width:"0px", overflow:"hidden"}}
       className={` absolute z-50 flex  h-full items-center justify-center top-0 left-0 w-full  `}
     >
       <div   onClick={()=>setOpen(false)} style={{ background: "rgba(0,0,0,0.57)" }} className="absolute cursor-pointer z-20 top left-0 w-full h-full">

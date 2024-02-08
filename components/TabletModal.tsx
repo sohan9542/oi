@@ -2,14 +2,15 @@ import Image from "next/image";
 import React,{useState} from "react";
 
 interface ComputerModalProps {
+  open: any;
   setOpen: (value: boolean) => void;
 }
 
-const TabletModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
+const TabletModal: React.FC<ComputerModalProps> = ({ setOpen,open }) => {
   const [imageLoad, setImageLoad] = useState(false)
   return (
     <div
-
+style={open?{width:'100%'}:{width:"0px", overflow:"hidden"}}
       className={` absolute z-50 flex  items-center justify-center top-0 left-0 w-full h-full  `}
     >
       <div onClick={() => setOpen(false)} style={{ background: "rgba(0,0,0,0.57)" }} className="absolute cursor-pointer z-10 top left-0 w-full h-full">

@@ -99,8 +99,8 @@ export default function Home() {
       <div className="items">
         {/* {isDayTime ? ( */}
         <div className="item relative">
-          {open && <ComputerModal setOpen={setOpen} />}
-          {open2 && <TabletModal setOpen={setOpen2} />}
+           <ComputerModal open={open} setOpen={setOpen} />
+          <TabletModal open={open2} setOpen={setOpen2} />
           <Image
             alt=""
             className="background_image  relative z-10"
