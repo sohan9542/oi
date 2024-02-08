@@ -13,6 +13,14 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [backgrondLoad, setBackgrondLoad] = useState(false)
   const [videoLoad, setVideoLoad] = useState(false)
+  const [initalLoad, setInitalLoad] = useState(false)
+  useEffect(() => {
+    
+  setTimeout(() => {
+    setInitalLoad(true)
+  }, 4000);
+  }, [])
+  
   useEffect(() => {
     console.log("video load", videoLoad)
     if (backgrondLoad && videoLoad) {
@@ -228,7 +236,7 @@ export default function Home() {
           </div>
         )} */}
       </div>
-      {(videoLoad  && backgrondLoad) ? <></> : <div className=" fixed bg-[#fff] flex items-center justify-center top-0 left-0 w-full h-full z-[100]">
+      {(videoLoad  && backgrondLoad && initalLoad) ? <></> : <div className=" fixed bg-[#fff] flex items-center justify-center top-0 left-0 w-full h-full z-[100]">
         <Image
           alt=""
 

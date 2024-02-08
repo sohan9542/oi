@@ -1,11 +1,12 @@
 import Image from "next/image";
-import React from "react";
+import React,{useState} from "react";
 
 interface ComputerModalProps {
   setOpen: (value: boolean) => void;
 }
 
 const TabletModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
+  const [imageLoad, setImageLoad] = useState(false)
   return (
     <div
 
@@ -25,13 +26,14 @@ const TabletModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
         src={"/assets/tablet_11.png"}
         width={2000}
         height={2000}
+        onLoad={()=>setImageLoad(true)}
       />
-      <div className="z-10 w-full flex items-center justify-center absolute  top-0 left-0 h-full">
+     {imageLoad && <div className="z-10 w-full flex items-center justify-center absolute  top-0 left-0 h-full">
         <div className="w-2/4 bg-[#038081] h-2/4">
 
         </div>
-      </div>
-      <div className="z-40 w-full flex items-center justify-center absolute  top-0 left-0 h-full">
+      </div>}
+      {imageLoad && <div className="z-40 w-full flex items-center justify-center absolute  top-0 left-0 h-full">
         <div className="w-2/4  h-2/4 relative ">
           <div className="pl-[10%] pr-[15%] py-[3%] w-full flex items-center justify-between">
             <Image
@@ -97,7 +99,7 @@ const TabletModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
            </div>
           </div>
         </div>
-      </div>
+      </div>}
     </div>
   );
 };
